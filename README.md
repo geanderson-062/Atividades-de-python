@@ -1,0 +1,2 @@
+# Resolvendo-equações-com-python
+ 
