@@ -13,7 +13,7 @@ sheet.title = "Exemplo de Planilha"
 headers = ["ID", "Nome", "Profissão"]
 sheet.append(headers)
 
-# Adicionando algumas linhas de dados
+# Adicionando algumas linhas de dados na ordem = id / nome / profissão
 dados = [
     [1, "João Silva", "Engenheiro"],
     [2, "Maria Oliveira", "Médica"],
