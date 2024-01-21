@@ -5,12 +5,8 @@ import openpyxl
 
 # Configuração da janela Tkinter usando customtkinter
 root = customtkinter.CTk()
-root.title("Gerador de Planilha Excel")
-
-# Definindo tamanho e outras propriedades da janela
-root.geometry("700x400")
+root.geometry("1920x1080")
 root.title("Sistema de Planilhas")
-# Certifique-se de que o ícone 'icone.ico' está no diretório do script
 root.resizable(False, False)
 
 # Definindo o tema
@@ -26,41 +22,45 @@ def salvar_excel():
         "Produto": produto_entry.get(),
         "Data": data_entry.get(),
     }
-
     # Criando o workbook e adicionando os dados
     workbook = openpyxl.Workbook()
     sheet = workbook.active
     sheet.append(list(dados.keys()))  # Cabeçalhos
     sheet.append(list(dados.values()))  # Valores
-
     # Pedindo ao usuário para escolher onde salvar o arquivo
     file_path = filedialog.asksaveasfilename(defaultextension=".xlsx")
     if file_path:
         workbook.save(file_path)
 
 
+# Ajustes de centralização para o grid
+root.grid_rowconfigure(0, weight=1)
+root.grid_rowconfigure(6, weight=1)
+root.grid_columnconfigure(0, weight=1)
+root.grid_columnconfigure(3, weight=1)
+
+# Título "Cadastrar"
+titulo_label = customtkinter.CTkLabel(root, text="Cadastrar", font=("Roboto", 25))
+titulo_label.grid(row=1, column=1, columnspan=2, pady=(10, 20))
+
 # Campos de entrada com customtkinter
-customtkinter.CTkLabel(root, text="ID").grid(row=0, column=0)
-id_entry = customtkinter.CTkEntry(root)
-id_entry.grid(row=0, column=1)
+id_entry = customtkinter.CTkEntry(root, placeholder_text="ID")
+id_entry.grid(row=2, column=1, columnspan=2, pady=5)
 
-customtkinter.CTkLabel(root, text="Cliente").grid(row=1, column=0)
-cliente_entry = customtkinter.CTkEntry(root)
-cliente_entry.grid(row=1, column=1)
+cliente_entry = customtkinter.CTkEntry(root, placeholder_text="Cliente")
+cliente_entry.grid(row=3, column=1, columnspan=2, pady=5)
 
-customtkinter.CTkLabel(root, text="Produto").grid(row=2, column=0)
-produto_entry = customtkinter.CTkEntry(root)
-produto_entry.grid(row=2, column=1)
+produto_entry = customtkinter.CTkEntry(root, placeholder_text="Produto")
+produto_entry.grid(row=4, column=1, columnspan=2, pady=5)
 
-customtkinter.CTkLabel(root, text="Data").grid(row=3, column=0)
-data_entry = customtkinter.CTkEntry(root)
-data_entry.grid(row=3, column=1)
+data_entry = customtkinter.CTkEntry(root, placeholder_text="Data")
+data_entry.grid(row=5, column=1, columnspan=2, pady=5)
 
 # Botão para salvar os dados em Excel
 save_button = customtkinter.CTkButton(
     root, text="Salvar como Excel", command=salvar_excel
 )
-save_button.grid(row=4, column=0, columnspan=2)
+save_button.grid(row=6, column=1, columnspan=2, pady=5)
 
 # Executa a aplicação
 root.mainloop()
