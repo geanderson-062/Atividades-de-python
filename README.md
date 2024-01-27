@@ -10,13 +10,11 @@ O principal objetivo deste repositório é documentar minha jornada de aprendiza
 
 O repositório está estruturado de forma a facilitar a navegação e compreensão das atividades:
 
-1. **Projetos**: Pasta que contém projetos mais extensos e aplicativos práticos que desenvolvi para aplicar meus conhecimentos.
+1. **Aplicações**: Pasta que contém projetos práticos que desenvolvidos.
 
-2. **Exercícios**: Diretório que abriga pequenos exercícios e desafios que enfrentei para praticar conceitos específicos de Python.
+2. **Exemplos**: Diretório que abriga exemplo de conceitos específicos de Python.
 
-3. **Desafios**: Nesta seção, estão os desafios mais complexos que explorei para testar meus limites e expandir meu conhecimento.
-
-4. **Recursos**: Qualquer material adicional, como tutoriais, artigos ou links, que considerei útil para meu aprendizado.
+3. **Aulas**: Nesta seção, estão explicações de conceitos basicos e avançados.
 
 ## Como Contribuir
 
