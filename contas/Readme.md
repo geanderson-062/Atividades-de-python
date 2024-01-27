@@ -1,1 +1,0 @@
-# Contas / equaçoes feitas com python 
