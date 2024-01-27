@@ -66,5 +66,3 @@ Lembre-se de que Python é uma linguagem dinamicamente tipada, o que significa q
 Agora que você aprendeu a declarar variáveis em Python, pode começar a usá-las para armazenar e manipular dados em seus programas.
 
 ```
-
-```
